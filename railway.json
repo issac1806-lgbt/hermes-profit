@@ -1,0 +1,33 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "name": "Hermes Profit Agent",
+  "description": "Autonomous 24/7 AI agent for profit discovery and free-API orchestration.",
+  "environments": [
+    {
+      "name": "production",
+      "services": [
+        {
+          "name": "bot",
+          "type": "web",
+          "build": {
+            "dockerfile": "Dockerfile"
+          },
+          "environmentVariables": [
+            {
+              "key": "DISCORD_TOKEN",
+              "value": "MTUwMzgwMzQ3MTE4MTI1NDgwNw.GgABoL.GEoBSTVGlexrt_D6HZSbAqi9-xH7m9sP31PwH0"
+            },
+            {
+              "key": "ALIYUN_API_KEY",
+              "value": "YOUR_ALIYUN_API_KEY_HERE"
+            },
+            {
+              "key": "ALIYUN_BASE_URL",
+              "value": "YOUR_ALIYUN_BASE_URL_HERE"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
